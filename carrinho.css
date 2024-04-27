@@ -1,0 +1,55 @@
+.carrinho{
+    margin-left: 2%;
+}
+
+.custom-heading {
+    text-align: left;
+}
+
+.resumo-compras{
+    text-align: left;
+}
+
+.col {
+    padding: 0.5%;
+}
+
+.col .btn{
+    width: 90px;
+    border-radius: 10px;
+}
+
+.btn {
+    border-radius: 10px;
+    background-color: #8d8d8d;
+    margin: 0.5%;
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+
+.custom-btn-add, 
+.custom-btn-add:active, 
+.custom-btn-add:focus {
+    background-color: #72b761;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.custom-btn-add:hover {
+    background-color: #91e07e !important;
+}
+
+.custom-btn-clear, 
+.custom-btn-clear:focus,
+.custom-btn-clear:active{
+    background-color: #c32113;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.custom-btn-clear:hover{
+    background-color: #dd8484 !important;
+}

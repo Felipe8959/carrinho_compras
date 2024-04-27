@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+}
+
+.conteudo a{
+    font-size: 28px;
+    color: rgb(0, 255, 13);
+}
+
+body {
+    position: relative;
+    overflow: hidden; /* Evita que o conteúdo ultrapasse o corpo da página */
+    background-image: url('back1.jpg'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
+    z-index: -1; /* Coloca a máscara atrás dos outros elementos */
+}
+.conteudo {
+    position: relative;
+    z-index: 1; /* Coloca o jumbotron sobre a máscara */
+    color: rgb(255, 255, 255); /* Cor do texto */
+    padding: 1rem; /* Espaçamento interno */
+}
+.card {
+    background-image: url('fundo.jpg'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px; /* Altura do card */
+    border-radius: 20px; /* Borda arredondada */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse o card */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Altura do footer */
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    body {
+        position: relative;
+        overflow: hidden; /* Evita que o conteúdo ultrapasse o corpo da página */
+        background-image: url('fundo.jpg'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
+        z-index: -1; /* Coloca a máscara atrás dos outros elementos */
+    }
+
+    .conteudo {
+        color: rgb(255, 255, 255); /* Cor do texto */
+        background-color: rgba(255, 255, 255, 0.0); /* Fundo semi-transparente */
+    }
+    
+    .card {
+        display: none; /* Oculta o card em telas menores */
+    }
+}
