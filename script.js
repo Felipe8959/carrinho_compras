@@ -52,7 +52,7 @@ function renderItems() {
     });
 
     let limit = document.getElementById('limit').value;
-    // Remova o símbolo de moeda e outros caracteres não numéricos
+    // Remove o R$ e outros caracteres não numéricos
     limit = parseFloat(limit.replace(/[^\d.,]/g, '').replace(',', '.'));
     const totalElement = document.getElementById('total');
     const percentage = (total / limit) * 100;
@@ -60,11 +60,11 @@ function renderItems() {
     totalElement.textContent = 'R$ ' + total.toFixed(2).replace('.', ',');
 
     if (total >= limit) {
-        totalElement.style.color = 'red'; // Maior ou igual ao limite
+        totalElement.style.color = 'red';
     } else if (percentage >= 60) {
-        totalElement.style.color = 'orange'; // Maior ou igual a 60% do limite
+        totalElement.style.color = 'orange';
     } else {
-        totalElement.style.color = 'green'; // Menor que 60% do limite
+        totalElement.style.color = 'green';
     }
 
     document.getElementById('itemCount').textContent = itemCount + " un";
@@ -80,7 +80,7 @@ function clearItems() {
 function formatInput(inputId) {
     // Formatação automática do preço enquanto o usuário digita
     document.getElementById(inputId).addEventListener('input', function(e) {
-        let value = e.target.value.replace(/\D/g, ''); // Remover tudo exceto números
+        let value = e.target.value.replace(/\D/g, ''); // Remove tudo exceto números
         value = (value / 100).toFixed(2); // Converter centavos em reais e limitar a 2 casas decimais
         e.target.value = 'R$ ' + value.replace('.', ','); // Adicionar o símbolo de moeda e substituir o ponto decimal por vírgula
     });

@@ -11,8 +11,8 @@ html, body {
 
 body {
     position: relative;
-    overflow: hidden; /* Evita que o conteúdo ultrapasse o corpo da página */
-    background-image: url('back1.jpg'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
+    overflow: hidden;
+    background-image: url('back1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -24,38 +24,30 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
-    z-index: -1; /* Coloca a máscara atrás dos outros elementos */
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
 }
 .conteudo {
     position: relative;
-    z-index: 1; /* Coloca o jumbotron sobre a máscara */
-    color: rgb(255, 255, 255); /* Cor do texto */
-    padding: 1rem; /* Espaçamento interno */
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
 }
 .card {
-    background-image: url('fundo.jpg'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
+    background-image: url('fundo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 500px; /* Altura do card */
-    border-radius: 20px; /* Borda arredondada */
+    height: 500px;
+    border-radius: 20px;
     overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse o card */
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px; /* Altura do footer */
-    text-align: left;
 }
 
 @media (max-width: 768px) {
     body {
         position: relative;
         overflow: hidden; /* Evita que o conteúdo ultrapasse o corpo da página */
-        background-image: url('fundo.jpg'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
+        background-image: url('fundo.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -67,13 +59,13 @@ body::before {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
-        z-index: -1; /* Coloca a máscara atrás dos outros elementos */
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: -1;
     }
 
     .conteudo {
-        color: rgb(255, 255, 255); /* Cor do texto */
-        background-color: rgba(255, 255, 255, 0.0); /* Fundo semi-transparente */
+        color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.0);
     }
 
     .conteudo a{
@@ -82,6 +74,6 @@ body::before {
     }
     
     .card {
-        display: none; /* Oculta o card em telas menores */
+        display: none;
     }
 }
